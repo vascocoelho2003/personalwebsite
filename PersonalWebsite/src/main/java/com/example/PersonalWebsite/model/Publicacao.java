@@ -15,12 +15,14 @@ public class Publicacao {
     private String titulo;
     private String conteudo;
     private LocalDateTime dataHoraPublicacao;
+    private String imageUrl;
 
     public Publicacao() {}
-    public Publicacao(String titulo, String conteudo, LocalDateTime dataHoraPublicacao) {
+    public Publicacao(String titulo, String conteudo, LocalDateTime dataHoraPublicacao, String imageUrl) {
         this.titulo = titulo;
         this.conteudo = conteudo;
         this.dataHoraPublicacao = dataHoraPublicacao;
+        this.imageUrl = imageUrl;
     }
 
     public Long getId() {
@@ -38,5 +40,16 @@ public class Publicacao {
     public String getConteudo() {
         return conteudo;
     }
-
+    public void setDataHoraPublicacao(LocalDateTime dataHoraPublicacao) {
+        this.dataHoraPublicacao = dataHoraPublicacao;
+    }
+    public LocalDateTime getDataHoraPublicacao() {
+        return dataHoraPublicacao;
+    }
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+    public String getImageUrl() {
+        return imageUrl;
+    }
 }

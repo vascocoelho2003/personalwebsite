@@ -16,13 +16,15 @@ public class Contacto {
     private String email;
     private String message;
     private LocalDateTime dataHoraContacto;
-    private String imageUrl;
+    private boolean lido;
 
     public Contacto() {}
-    public Contacto(String email, String message, LocalDateTime dataHoraContacto){
+    public Contacto(String nome ,String email, String message, LocalDateTime dataHoraContacto){
+        this.nome = nome;
         this.email = email;
         this.message = message;
         this.dataHoraContacto = dataHoraContacto;
+        this.lido=false;
     }
 
     public long getID(){
@@ -46,5 +48,16 @@ public class Contacto {
     public String getMessage(){
         return this.message;
     }
-
+    public boolean getLido(){
+        return this.lido;
+    }
+    public void setLido(boolean lido){
+        this.lido = lido;
+    }
+    public void setDataHoraContacto(LocalDateTime dataHoraContacto){
+        this.dataHoraContacto = dataHoraContacto;
+    }
+    public LocalDateTime getDataHoraContacto(){
+        return this.dataHoraContacto;
+    }
 }
